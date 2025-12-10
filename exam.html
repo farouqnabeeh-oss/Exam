@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>اختبار تصميم وبرمجة مواقع - تسجيل الدخول</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+=            <div id="loginCard" class="card active">
+                <div class="card-header">
+                    <div class="logo">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h1>مرحباً بك مرة أخرى</h1>
+                    <p>سجل دخولك للوصول إلى النظام </p>
+                </div>
+
+                <div id="loginMessage" class="message"></div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginUsername"><i class="fas fa-user"></i>
+                            اسم المستخدم</label>
+                        <input type="text" id="loginUsername"
+                            class="form-control" placeholder="أدخل اسم المستخدم"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword"><i class="fas fa-lock"></i>
+                            كلمة المرور</label>
+                        <input type="password" id="loginPassword"
+                            class="form-control" placeholder="أدخل كلمة المرور"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                    </button>
+                </form>
+
+                <div class="links">
+                    <p>ليس لديك حساب؟ <a href="#" id="showRegister">أنشئ حساباً
+                            جديداً</a></p>
+                    <p><a href="#" id="forgotPassword">نسيت كلمة المرور؟</a></p>
+                </div>
+
+                <div class="footer">
+                    <p>©المهندس فاروق محمد نبيه‼️ | جميع الحقوق محفوظة</p>
+                </div>
+            </div>
+
+            <div id="registerCard" class="card">
+                <div class="card-header">
+                    <div class="logo">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h1>أنشئ حساباً جديداً</h1>
+                    <p>سجل معلوماتك للانضمام إلى نظام الاختبارات</p>
+                </div>
+
+                <div id="registerMessage" class="message"></div>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerName"><i class="fas fa-user"></i>
+                            الاسم الكامل</label>
+                        <input type="text" id="registerName"
+                            class="form-control" placeholder="أدخل اسمك الثلاثي"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerUsername"><i class="fas fa-at"></i>
+                            اسم المستخدم</label>
+                        <input type="text" id="registerUsername"
+                            class="form-control"
+                            placeholder="اختر اسم مستخدم فريد"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-user-tag"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail"><i
+                                class="fas fa-envelope"></i> البريد
+                            الإلكتروني</label>
+                        <input type="email" id="registerEmail"
+                            class="form-control" placeholder="example@email.com"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword"><i
+                                class="fas fa-lock"></i> كلمة المرور</label>
+                        <input type="password" id="registerPassword"
+                            class="form-control"
+                            placeholder="كلمة مرور قوية (8 أحرف على الأقل)"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword"><i class="fas fa-lock"></i>
+                            تأكيد كلمة المرور</label>
+                        <input type="password" id="confirmPassword"
+                            class="form-control"
+                            placeholder="أعد كتابة كلمة المرور"
+                            required>
+                        <div class="input-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-user-plus"></i> إنشاء حساب
+                    </button>
+                </form>
+
+                <div class="links">
+                    <p>لديك حساب بالفعل؟ <a href="#" id="showLogin">سجل
+                            دخولك</a></p>
+                </div>
+            </div>
+
+            <div id="examCard" class="card">
+                <button class="back-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                </button>
+
+                <div class="card-header">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h1>اختبار HTML/CSS</h1>
+                    <p>اختبار شامل 20 سؤال | 30 دقيقة</p>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>تقدم الاختبار</span>
+                        <span id="progressText">سؤال 1 من 20</span>
+                    </div>
+                </div>
+
+                <div id="questionContainer"></div>
+
+                <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    <button id="prevBtn" class="btn btn-warning">
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <button id="nextBtn" class="btn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <button id="submitExam" class="btn btn-success"
+                    style="margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> تسليم الإجابات
+                </button>
+            </div>
+
+            <div id="resultsCard" class="card">
+                <button class="back-btn" id="backToExam">
+                    <i class="fas fa-redo"></i> اختبار جديد
+                </button>
+
+                <div class="card-header">
+                    <div class="logo">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h1>تهانينا! 🎉</h1>
+                    <p>لقد أكملت الاختبار بنجاح</p>
+                </div>
+
+                <div class="results-container">
+                    <div class="score-circle">
+                        <div class="score-circle-inner">
+                            <div id="scoreValue" class="score-value">0%</div>
+                            <div style="color: #666; font-size: 14px;">النسبة
+                                المئوية</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: #F8F9FA; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h3 style="color: var(--dark); margin-bottom: 15px;">👤
+                            معلومات الطالب</h3>
+                        <p><strong>الاسم:</strong> <span
+                                id="studentName"></span></p>
+                        <p><strong>اسم المستخدم:</strong> <span
+                                id="studentUsername"></span></p>
+                        <p><strong>التاريخ:</strong> <span
+                                id="resultDate"></span></p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div>✅ صحيحة</div>
+                            <div id="correctCount"
+                                class="stat-value correct">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <div>❌ خاطئة</div>
+                            <div id="wrongCount"
+                                class="stat-value wrong">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <div>⏱️ الوقت</div>
+                            <div id="timeTaken" class="stat-value">0 د</div>
+                        </div>
+                        <div class="stat-box">
+                            <div>📊 النسبة</div>
+                            <div id="percentage"
+                                class="stat-value correct">0%</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin: 30px 0; padding: 20px; background: #F8F9FA; border-radius: 10px;">
+                        <h3 style="color: var(--dark); margin-bottom: 10px;">📈
+                            تقييم الأداء</h3>
+                        <p id="performanceText"
+                            style="line-height: 1.6; color: #555;"></p>
+                    </div>
+
+                    <button id="retakeTest" class="btn"
+                        style="margin-bottom: 15px;">
+                        <i class="fas fa-redo"></i> إعادة الاختبار
+                    </button>
+
+                    <button id="backToLoginFromResults" class="btn">
+                        <i class="fas fa-home"></i> العودة للصفحة الرئيسية
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+
+</html>
